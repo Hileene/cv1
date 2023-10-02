@@ -170,6 +170,29 @@ body {
   padding: 40px;
 }
 
+/*********TOGGLE BUTTON*****/
+
+.language-toggle {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  right: 36px; /* Adjust the right position as needed */
+}
+
+.toggle-button {
+  background-color: var(--main-color);
+  color: #fff; /* Adjust the text color */
+  text-transform: uppercase;
+  border-radius: 45%;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: var(--tertiary-color);
+}
 /*********ABOUT***********/
 
 .about {
