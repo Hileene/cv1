@@ -1,109 +1,205 @@
 {
   "basics": {
     "name": "Aline Behalal",
-    "job": "Junior Frontend Developer",
     "address": "Paris 19e, France",
-    "phone": "+33 7 83 41 55 55",
-    "email": "linebeh@gmail.com",
+    "email": "janedoe@gmma.com",
     "siteWeb": "Your portfolio",
-    "linkedin": "linkedin.com/in/alinebehalal",
-    "github": "Link to your GitHub profile"
+    "linkedin": "linkedin.com/in/xxxxx",
+    "github": "Link to your GitHub profile",
+    "phone": "+33 0 00 00 00 00"
   },
-  "objective": "As a recent graduate with a passion for front-end development, I bring a foundation in web content creation, SEO expertise, and a knack for English to French translation. Eager to apply my skills, I aim to contribute effectively to innovative projects while continuously enhancing my coding abilities.",
+  "english": {
+    "job": "Junior Frontend Developer",
 
-  "technicalSkills": [
-    "Programming Languages: HTML5, CSS3, JavaScript",
-    "Frameworks: React",
-    "Version Control Tools: Git, GitHub",
-    "Responsive Design",
-    "DOM Manipulation",
-    "Problem Solving"
-  ],
+    "objective": "As a recent graduate with a passion for front-end development, I bring a foundation in web content creation, SEO expertise, and a knack for English to French translation. Eager to apply my skills, I aim to contribute effectively to innovative projects while continuously enhancing my coding abilities.",
 
-  "personalProjects": [
-    {
-      "name": "Personal Portfolio",
-      "description": "A personal website created with React to showcase my skills, projects, and experiences.",
-      "link": "Link to your online portfolio"
-    },
-    {
-      "name": "Netflix Homepage Clone",
-      "description": "A reproduction of the Netflix homepage using React to practice front-end development.",
-      "link": "Link to the project on GitHub"
-    },
-    {
-      "name": "Personal Project 3",
-      "description": "Description of personal project 3.",
-      "link": "Link to personal project 3"
-    },
-    {
-      "name": "Personal Project 4",
-      "description": "Description of personal project 4.",
-      "link": "Link to personal project 4"
-    }
-  ],
+    "technicalSkills": [
+      "Programming Languages: HTML5, CSS3, JavaScript",
+      "Frameworks: React",
+      "Version Control Tools: Git, GitHub",
+      "Responsive Design",
+      "DOM Manipulation",
+      "Problem Solving"
+    ],
 
-  "experiences": [
-    {
-      "position": "Translator (English to French)-Remote",
-      "company": "RWS Moravia",
-      "period": "2021-Present",
-      "responsibilities": [
-        "Translated and localized a variety of content including general news, blog posts, social media, and IT materials from English to French. Conducted meticulous review and proofreading to ensure linguistic accuracy."
-      ]
-    },
-    {
-      "position": "Search Engine Evaluator-Remote",
-      "company": "Lionbridge",
-      "period": "2019-2021",
-      "responsibilities": [
-        "Evaluated search engine page results and meticulously mapped search outcomes for the French market in adherence to client guidelines. Demonstrated keen analytical skills and unwavering attention to detail."
-      ]
-    },
-    {
-      "position": "Freelance French Content Editor-Remote",
-      "company": "Fanatee",
-      "period": "2018-2019",
-      "responsibilities": [
-        "Edited and created game content, translating from English to French for a crossword game, as well as app interface, app store materials, and corporate documents. Oversaw French Content Creators' work, providing feedback and maintaining editing guidelines."
-      ]
-    },
-    {
-      "position": " Bilingual Web Content Editor-Montreal",
-      "company": "Cimpl",
-      "period": "2013-2014",
-      "responsibilities": [
-        "Managed blog posts, wrote and edited content on Hubspot CMS, and translated articles and corporate documents from English to French. Completed Inbound Marketing training, contributed to campaign development, organized SEO database, and authored a White Paper on BYOD (Bring Your Own Device)."
-      ]
-    }
-  ],
+    "personalProjects": [
+      {
+        "name": "Personal Portfolio",
+        "description": "A personal website created with React to showcase my skills, projects, and experiences.",
+        "link": "Link to your online portfolio"
+      },
+      {
+        "name": "Netflix Homepage Clone",
+        "description": "A reproduction of the Netflix homepage using React to practice front-end development.",
+        "link": "Link to the project on GitHub"
+      },
+      {
+        "name": "Personal Project 3",
+        "description": "Description of personal project 3.",
+        "link": "Link to personal project 3"
+      },
+      {
+        "name": "Personal Project 4",
+        "description": "Description of personal project 4.",
+        "link": "Link to personal project 4"
+      }
+    ],
 
-  "educations": [
-    {
-      "year": "2022-2023",
-      "diploma": "Associate Degree Frontend Developer",
-      "school": "Openclassrooms"
-    },
-    {
-      "year": "2008-2011",
-      "diploma": "Bachelor in Communication",
-      "school": "University of Quebec in Montreal, Montreal, Canada"
-    },
-    {
-      "year": "2001-2005",
-      "diploma": "Bachelor in History",
-      "school": "Paris VII - Denis Diderot University, Paris, France"
-    }
-  ],
+    "experiences": [
+      {
+        "position": "Translator (English to French)-Remote",
+        "company": "RWS Moravia",
+        "period": "2021-Present",
+        "responsibilities": [
+          "Translated and localized a variety of content including general news, blog posts, social media, and IT materials from English to French. Conducted meticulous review and proofreading to ensure linguistic accuracy."
+        ]
+      },
+      {
+        "position": "Search Engine Evaluator-Remote",
+        "company": "Lionbridge",
+        "period": "2019-2021",
+        "responsibilities": [
+          "Evaluated search engine page results and meticulously mapped search outcomes for the French market in adherence to client guidelines. Demonstrated keen analytical skills and unwavering attention to detail."
+        ]
+      },
+      {
+        "position": "Freelance French Content Editor-Remote",
+        "company": "Fanatee",
+        "period": "2018-2019",
+        "responsibilities": [
+          "Edited and created game content, translating from English to French for a crossword game, as well as app interface, app store materials, and corporate documents. Oversaw French Content Creators' work, providing feedback and maintaining editing guidelines."
+        ]
+      },
+      {
+        "position": " Bilingual Web Content Editor-Montreal",
+        "company": "Cimpl",
+        "period": "2013-2014",
+        "responsibilities": [
+          "Managed blog posts, wrote and edited content on Hubspot CMS, and translated articles and corporate documents from English to French. Completed Inbound Marketing training, contributed to campaign development, organized SEO database, and authored a White Paper on BYOD (Bring Your Own Device)."
+        ]
+      }
+    ],
 
-  "academicProjects": [
-    "Restaurant Website - Creating a static website for a fictional restaurant using HTML, CSS, and JavaScript.",
-    "Task Management Application - Developing a simple web application for task management using HTML, CSS, and JavaScript.",
-    "Academic Project 3 - Description of academic project 3.",
-    "Academic Project 4 - Description of academic project 4."
-  ],
+    "educations": [
+      {
+        "year": "2022-2023",
+        "diploma": "Associate Degree Frontend Developer",
+        "school": "Openclassrooms"
+      },
+      {
+        "year": "2008-2011",
+        "diploma": "Bachelor in Communication",
+        "school": "University of Quebec in Montreal, Montreal, Canada"
+      },
+      {
+        "year": "2001-2005",
+        "diploma": "Bachelor in History",
+        "school": "Paris VII - Denis Diderot University, Paris, France"
+      }
+    ],
 
-  "languages": ["French: Native", "English: Advanced"],
+    "academicProjects": [
+      "Restaurant Website - Creating a static website for a fictional restaurant using HTML, CSS, and JavaScript.",
+      "Task Management Application - Developing a simple web application for task management using HTML, CSS, and JavaScript.",
+      "Academic Project 3 - Description of academic project 3.",
+      "Academic Project 4 - Description of academic project 4."
+    ],
 
-  "interests": ["Novel", "Cooking", "Puzzle", "Cinema"]
+    "languages": ["French: Native", "English: Advanced"],
+
+    "interests": ["Novel", "Cooking", "Puzzle", "Cinema"]
+  },
+  "french": {
+    "job": "Développeuse Frontend Junior",
+    "objective": "Récemment diplômée et passionnée par le développement frontend, je possède une base solide en création de contenu web, en référencement (SEO) et en traduction de l'anglais vers le français. J'ai hâte de mettre en oeuvre mes compétences et de contribuer efficacement à des projets innovants tout en améliorant continuellement mes compétences en programmation.",
+    "technicalSkills": [
+      "Langages de programmation : HTML5, CSS3, JavaScript",
+      "Frameworks : React",
+      "Outils de contrôle de version : Git, GitHub",
+      "Design adaptatif",
+      "Manipulation du DOM",
+      "Résolution de problèmes"
+    ],
+    "personalProjects": [
+      {
+        "name": "Portfolio Personnel",
+        "description": "Site web personnel créé avec React pour présenter mes compétences, mes projets et mon parcours.",
+        "link": "Lien vers votre portfolio en ligne"
+      },
+      {
+        "name": "Clone de la Page d'Accueil de Netflix",
+        "description": "Reproduction de la page d'accueil de Netflix en utilisant React pour pratiquer le développement frontend.",
+        "link": "Lien vers le projet sur GitHub"
+      },
+      {
+        "name": "Projet Personnel 3",
+        "description": "Description du projet personnel 3.",
+        "link": "Lien vers le projet personnel 3"
+      },
+      {
+        "name": "Projet Personnel 4",
+        "description": "Description du projet personnel 4.",
+        "link": "Lien vers le projet personnel 4"
+      }
+    ],
+    "experiences": [
+      {
+        "position": "Traductrice (Anglais vers Français) - À distance",
+        "company": "RWS Moravia",
+        "period": "2021-Présent",
+        "responsibilities": [
+          "Traduction et localisation d'une variété de contenus, y compris les actualités générales, les articles de blog, les réseaux sociaux et le matériel informatique de l'anglais vers le français. Révision minutieuse et relecture pour garantir l'exactitude linguistique."
+        ]
+      },
+      {
+        "position": "Évaluatrice de Moteurs de Recherche - À distance",
+        "company": "Lionbridge",
+        "period": "2019-2021",
+        "responsibilities": [
+          "Évaluation des résultats des moteurs de recherche et cartographie méticuleuse des résultats de recherche pour le marché français, conformément aux directives du client. Démonstration de compétences analytiques approfondies et d'une attention inébranlable aux détails."
+        ]
+      },
+      {
+        "position": "Éditrice de Contenu Freelance en Français - À distance",
+        "company": "Fanatee",
+        "period": "2018-2019",
+        "responsibilities": [
+          "Édition et création de contenu de jeux, traduction de l'anglais vers le français pour un jeu de mots croisés, ainsi que l'interface de l'application, les matériaux de l'App Store et les documents internes. Supervision du travail des créateurs de contenu français, transmettre des commentaires et maintien des directives d'édition."
+        ]
+      },
+      {
+        "position": "Rédactrice Web Bilingue - Montréal",
+        "company": "Cimpl",
+        "period": "2013-2014",
+        "responsibilities": [
+          "Gestion des articles de blog, rédaction et édition de contenu sur Hubspot CMS, et traduction d'articles et de documents internes de l'anglais vers le français. Formation en Inbound Marketing, contribution au développement de campagnes, organisation de la base de données SEO, et rédaction d'un Livre Blanc sur le BYOD (Apportez Votre Propre Appareil)."
+        ]
+      }
+    ],
+    "educations": [
+      {
+        "year": "2022-2023",
+        "diploma": "Titre RNCP niveau V, Développeur Intégrateur Web",
+        "school": "Openclassrooms"
+      },
+      {
+        "year": "2008-2011",
+        "diploma": "Licence en Communication",
+        "school": "Université du Québec à Montréal, Montréal, Canada"
+      },
+      {
+        "year": "2001-2005",
+        "diploma": "Licence en Histoire",
+        "school": "Université Paris VII - Denis Diderot, Paris, France"
+      }
+    ],
+    "academicProjects": [
+      "Site Web de Restaurant - Création d'un site Web statique pour un restaurant fictif en utilisant HTML, CSS et JavaScript.",
+      "Application de Gestion des Tâches - Développement d'une application Web simple de gestion des tâches en utilisant HTML, CSS et JavaScript.",
+      "Projet Académique 3 - Description du projet académique 3.",
+      "Projet Académique 4 - Description du projet académique 4."
+    ],
+    "languages": ["Français : Langue maternelle", "Anglais : Avancé"],
+    "interests": ["Roman", "Cuisine", "Puzzle", "Cinéma"]
+  }
 }
