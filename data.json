@@ -1,0 +1,109 @@
+{
+  "basics": {
+    "name": "Aline Behalal",
+    "job": "Junior Frontend Developer",
+    "address": "Paris 19e, France",
+    "phone": "+33 7 83 41 55 55",
+    "email": "linebeh@gmail.com",
+    "siteWeb": "Your portfolio",
+    "linkedin": "linkedin.com/in/alinebehalal",
+    "github": "Link to your GitHub profile"
+  },
+  "objective": "As a recent graduate with a passion for front-end development, I bring a foundation in web content creation, SEO expertise, and a knack for English to French translation. Eager to apply my skills, I aim to contribute effectively to innovative projects while continuously enhancing my coding abilities.",
+
+  "technicalSkills": [
+    "Programming Languages: HTML5, CSS3, JavaScript",
+    "Frameworks: React",
+    "Version Control Tools: Git, GitHub",
+    "Responsive Design",
+    "DOM Manipulation",
+    "Problem Solving"
+  ],
+
+  "personalProjects": [
+    {
+      "name": "Personal Portfolio",
+      "description": "A personal website created with React to showcase my skills, projects, and experiences.",
+      "link": "Link to your online portfolio"
+    },
+    {
+      "name": "Netflix Homepage Clone",
+      "description": "A reproduction of the Netflix homepage using React to practice front-end development.",
+      "link": "Link to the project on GitHub"
+    },
+    {
+      "name": "Personal Project 3",
+      "description": "Description of personal project 3.",
+      "link": "Link to personal project 3"
+    },
+    {
+      "name": "Personal Project 4",
+      "description": "Description of personal project 4.",
+      "link": "Link to personal project 4"
+    }
+  ],
+
+  "experiences": [
+    {
+      "position": "Translator (English to French)-Remote",
+      "company": "RWS Moravia",
+      "period": "2021-Present",
+      "responsibilities": [
+        "Translated and localized a variety of content including general news, blog posts, social media, and IT materials from English to French. Conducted meticulous review and proofreading to ensure linguistic accuracy."
+      ]
+    },
+    {
+      "position": "Search Engine Evaluator-Remote",
+      "company": "Lionbridge",
+      "period": "2019-2021",
+      "responsibilities": [
+        "Evaluated search engine page results and meticulously mapped search outcomes for the French market in adherence to client guidelines. Demonstrated keen analytical skills and unwavering attention to detail."
+      ]
+    },
+    {
+      "position": "Freelance French Content Editor-Remote",
+      "company": "Fanatee",
+      "period": "2018-2019",
+      "responsibilities": [
+        "Edited and created game content, translating from English to French for a crossword game, as well as app interface, app store materials, and corporate documents. Oversaw French Content Creators' work, providing feedback and maintaining editing guidelines."
+      ]
+    },
+    {
+      "position": " Bilingual Web Content Editor-Montreal",
+      "company": "Cimpl",
+      "period": "2013-2014",
+      "responsibilities": [
+        "Managed blog posts, wrote and edited content on Hubspot CMS, and translated articles and corporate documents from English to French. Completed Inbound Marketing training, contributed to campaign development, organized SEO database, and authored a White Paper on BYOD (Bring Your Own Device)."
+      ]
+    }
+  ],
+
+  "educations": [
+    {
+      "year": "2022-2023",
+      "diploma": "Associate Degree Frontend Developer",
+      "school": "Openclassrooms"
+    },
+    {
+      "year": "2008-2011",
+      "diploma": "Bachelor in Communication",
+      "school": "University of Quebec in Montreal, Montreal, Canada"
+    },
+    {
+      "year": "2001-2005",
+      "diploma": "Bachelor in History",
+      "school": "Paris VII - Denis Diderot University, Paris, France"
+    }
+  ],
+
+  "academicProjects": [
+    "Restaurant Website - Creating a static website for a fictional restaurant using HTML, CSS, and JavaScript.",
+    "Task Management Application - Developing a simple web application for task management using HTML, CSS, and JavaScript.",
+    "Academic Project 3 - Description of academic project 3.",
+    "Academic Project 4 - Description of academic project 4."
+  ],
+
+  "languages": ["French: Native", "English: Advanced"],
+
+  "interests": ["Novel", "Cooking", "Puzzle", "Cinema"]
+}
