@@ -1,79 +1,78 @@
-fetch('data.json')
-  .then((response) => response.json())
-  .then((data) => displayDatas(data))
-  .catch((err) => console.error(err))
+// Function to toggle the language and update the display
+function toggleLanguage(data, currentLanguage) {
+  const content = data[currentLanguage]
 
-// AFFICHAGE DU CONTENU DU CV
+  // Mise à jour du contenu en fonction de la langue
 
-function displayDatas(data) {
   //COTE GAUCHE
 
-  // Nom et job
+  // NOM, JOB, CONTACT
+  document.querySelector(
+    '#cvName'
+  ).innerHTML = `${data.basics.name}<br /><span id="cvJob">${content.job}</span>`
+  document.querySelector('#cvPhone').innerHTML = data.basics.phone
+  document.querySelector('#cvEmail').innerHTML = data.basics.email
+  document.querySelector('#cvWeb').innerHTML = data.basics.siteWeb
+  document.querySelector('#cvLinkedin').innerHTML = data.basics.linkedin
+  document.querySelector('#cvAddress').innerHTML = data.basics.address
 
-  const cvName = document.querySelector('#cvName')
-  const identity = data.basics
-  cvName.innerHTML += `${identity.name} 
-  <br /><span id="cvJob">${identity.job}</span>
-  `
-
-  //Contact Info
-
-  let cvPhone = document.querySelector('#cvPhone')
-  cvPhone.innerHTML = data.basics.phone
-
-  let cvEmail = document.querySelector('#cvEmail')
-  cvEmail.innerHTML = data.basics.email
-
-  let cvWeb = document.querySelector('#cvWeb')
-  cvWeb.innerHTML = data.basics.siteWeb
-
-  let cvLinkedin = document.querySelector('#cvLinkedin')
-  cvLinkedin.innerHTML = data.basics.linkedin
-
-  let cvAddress = document.querySelector('#cvAddress')
-  cvAddress.innerHTML = data.basics.address
-
-  //Formation
+  // EDUCATION
   const cvEducation = document.querySelector('#education')
-  const educations = data.educations
-  for (let education of educations) {
+  cvEducation.innerHTML = '' // Clear previous education content
+  for (let education of content.educations) {
     cvEducation.innerHTML += `<li>
-    <h5 id="cvSchoolYear">${education.year}</h5>
-    <h4 id="cvSchoolDiploma">${education.diploma}</h4>
-    <h4 id="cvSchool">${education.school}</h4>
-  </li>`
+      <h5 id="cvSchoolYear">${education.year}</h5>
+      <h4 id="cvSchoolDiploma">${education.diploma}</h4>
+      <h4 id="cvSchool">${education.school}</h4>
+    </li>`
   }
 
-  //Profile
-  let cvProfile = document.querySelector('#objective')
-  cvProfile.innerHTML = data.objective
+  //OBJECTIF
+  document.querySelector('#objective').innerHTML = content.objective
 
-  //Expérience
+  //EXPERIENCE
   const cvExperience = document.querySelector('#experience')
-  const experiences = data.experiences
-  for (let experience of experiences) {
+  cvExperience.innerHTML = '' // Clear previous experience content
+  for (let experience of content.experiences) {
     cvExperience.innerHTML += `<div class="box">
-    <div class="year_company">
-    <h5>${experience.period}</h5>
-    <h5>${experience.company}</h5>
-  </div>
-  <div class="text">
-    <h4>${experience.position}</h4>
-    <p>
-    ${experience.responsibilities}
-    </p>
-  </div>
-  </div>
-  `
+      <div class="year_company">
+      <h5>${experience.period}</h5>
+      <h5>${experience.company}</h5>
+    </div>
+    <div class="text">
+      <h4>${experience.position}</h4>
+      <p>
+      ${experience.responsibilities}
+      </p>
+    </div>
+    </div>`
   }
-  // Hobbies
-  const interests = data.interests
 
+  // HOBBIES
+  const interests = content.interests
   interests.forEach((interest, index) => {
-    console.log(interest)
     const span = document.getElementById(`hobbies-${index + 1}`)
     if (span) {
       span.textContent = interest
     }
   })
 }
+
+// Récupération et affichage du contenu pour la langue initiale
+
+fetch('data.json')
+  .then((response) => response.json())
+  .then((data) => {
+    const initialLanguage = 'english' // Set the initial language
+    toggleLanguage(data, initialLanguage)
+
+    // Toggle Button Event Listener
+    const toggleButton = document.getElementById('toggleButton')
+    toggleButton.addEventListener('click', () => {
+      const currentLanguage = toggleButton.textContent.toLowerCase() // On oobtient la langue initiale
+      const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
+      toggleButton.textContent = newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
+      toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
+    })
+  })
+  .catch((err) => console.error(err))
