@@ -142,7 +142,7 @@ img {
 @media screen and (max-width: 968px) {
   .nav__menu {
     position: fixed;
-    bottom: 100%;
+    bottom: -100%;
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
@@ -192,8 +192,14 @@ img {
   margin-bottom: var(--mb-1);
 }
 /* Show menu */
+.show-menu {
+  bottom: var(--header-height);
+}
 
 /* Active menu link */
+.active-link {
+  color: var(--title-color);
+}
 
 /*========== HOME ==========*/
 
