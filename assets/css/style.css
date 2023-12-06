@@ -292,18 +292,238 @@ img {
 }
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
+.education__content,
+.experience__content {
+  display: flex;
+}
 
+.education__time,
+.experience__time {
+  padding-right: 1rem;
+}
+
+.education__rounder,
+.experience__rounder {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-color-light);
+  border-radius: 50%;
+  margin-top: 0.25rem;
+}
+
+.education__line,
+.experience__line {
+  display: block;
+  width: 2px;
+  height: 110%;
+  background-color: var(--text-color-light);
+  transform: translate(7px, 0);
+}
+
+.education__data,
+.experience__data {
+  gap: 0.5rem;
+}
+
+.education__title,
+.experience__title {
+  font-size: var(--h3-font-size);
+}
+
+.experience__title {
+  font-size: 0.85rem;
+}
+.education__studies,
+.experience__company {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.education__year {
+  font-size: var(--smaller-font-size);
+}
 /*========== SKILLS AND LANGUAGES ==========*/
+
+.skills__desktop {
+  display: none;
+}
+.skills__content,
+.languages__content {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.skills__name,
+.languages__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills__circle,
+.languages__circle {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
 
 /*========== CERTIFICATES ==========*/
 
 /*========== REFERENCES ==========*/
 
 /*========== INTERESTS ==========*/
+.interests__container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
+
+.interests__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.interests__icon {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.25rem;
+}
 
 /* Scroll top */
 
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: var(--container-color-alt);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+}
+.scrolltop__icon {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 5rem;
+}
+
 /*========== MEDIA QUERIES ==========*/
+
 /* For small devices, menu two columns */
+@media screen and (max-width: 320px) {
+  .nav__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 5rem;
+  }
+
+  .skills__desktop {
+    display: none;
+  }
+}
 
 /* Classes modified for large screen size */
+@media screen and (min-width: 968px) {
+  body {
+    margin: 3rem 0;
+  }
+
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-header,
+  .scrolltop {
+    display: none;
+  }
+
+  .resume {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    background-color: var(--container-color);
+    box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+  }
+
+  .resume__left {
+    background-color: var(--container-color-alt);
+  }
+  .resume__left,
+  .resume__right {
+    padding: 0 1.5rem;
+  }
+
+  .section-title {
+    text-align: initial;
+  }
+  .profile__description,
+  .experience__description {
+    text-align: justify;
+  }
+
+  .experience__title {
+    font-size: var(--h3-font-size);
+  }
+
+  .home__container {
+    gap: 1.5rem;
+  }
+
+  .home__button-movil {
+    display: none;
+  }
+
+  /*============SKILLS DESKTOP=========== */
+  .skills__mobile {
+    display: none;
+  }
+  .skills__desktop {
+    display: block;
+  }
+
+  .skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: var(--container-color-alt);
+  }
+
+  .skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--text-color-light);
+  }
+
+  .languages__content {
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 3.5rem;
+  }
+
+  .interests__container {
+    grid-template-columns: repeat(5, max-content);
+    column-gap: 3.5rem;
+  }
+}
