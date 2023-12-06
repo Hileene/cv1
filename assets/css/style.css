@@ -52,12 +52,12 @@ html {
 
 /*========== Font size variables to scale cv ==========*/
 body.scale-cv {
-  --h1-font-size: 0.938rem;
-  --h2-font-size: 0.938rem;
-  --h3-font-size: 0.875rem;
-  --normal-font-size: 0.813rem;
-  --small-font-size: 0.75rem;
-  --smaller-font-size: 0.688rem;
+  --h1-font-size: 0.8rem;
+  --h2-font-size: 0.8rem;
+  --h3-font-size: 0.75rem;
+  --normal-font-size: 0.715rem;
+  --small-font-size: 0.6rem;
+  --smaller-font-size: 0.558rem;
 }
 
 /*========== Generate PDF button ==========*/
@@ -86,21 +86,26 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  padding: 1.5rem 0 0.8rem;
+  /* padding: 1.12rem 0 0.8rem; */
+  padding: 0.8rem 0 0.2rem;
 }
 
 .scale-cv .section-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.scale-cv .resume__left,
-.scale-cv .resume__right {
+.scale-cv .resume__left {
   padding: 0 1rem;
+}
+
+.scale-cv .resume__right {
+  padding: 0 2rem 0 1rem;
 }
 
 .scale-cv .home__img {
   width: 90px;
   height: 90px;
+  object-fit: cover;
 }
 
 .scale-cv .home__data {
@@ -154,6 +159,10 @@ body.scale-cv {
 
 .scale-cv .skills .box {
   grid-template-columns: 100px 1fr;
+}
+
+.scale-cv .skills .box .percent {
+  height: 5px;
 }
 
 body {
