@@ -51,10 +51,111 @@ html {
 /*========== Button Dark/Light ==========*/
 
 /*========== Font size variables to scale cv ==========*/
+body.scale-cv {
+  --h1-font-size: 0.938rem;
+  --h2-font-size: 0.938rem;
+  --h3-font-size: 0.875rem;
+  --normal-font-size: 0.813rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.688rem;
+}
 
 /*========== Generate PDF button ==========*/
+.generate-pdf {
+  display: none;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.generate-pdf:hover {
+  color: var(--title-color);
+}
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
+.scale-cv .generate-pdf {
+  display: none;
+}
+
+.scale-cv .bd-container {
+  /* max-width: 746px; */
+  max-width: 595px;
+}
+
+.scale-cv .section {
+  padding: 1.5rem 0 0.8rem;
+}
+
+.scale-cv .section-title {
+  margin-bottom: 0.75rem;
+}
+
+.scale-cv .resume__left,
+.scale-cv .resume__right {
+  padding: 0 1rem;
+}
+
+.scale-cv .home__img {
+  width: 90px;
+  height: 90px;
+}
+
+.scale-cv .home__data {
+  gap: 0.25rem;
+}
+
+.scale-cv .home__address,
+.scale-cv .social__container {
+  gap: 0.75rem;
+}
+
+.scale-cv .home__icon,
+.scale-cv .social__icon,
+.scale-cv .interests__icon {
+  font-size: 1rem;
+}
+
+.scale-cv .education__container,
+.scale-cv .experience__container,
+.scale-cv .skills__desktop-container {
+  gap: 1rem;
+}
+
+.scale-cv .education__time,
+.scale-cv .experience__time {
+  padding-right: 0.5rem;
+}
+
+.scale-cv .education__rounder,
+.scale-cv .experience__rounder {
+  width: 11px;
+  height: 11px;
+  margin-top: 0.22rem;
+}
+
+.scale-cv .education__line,
+.scale-cv .experience__line {
+  width: 1px;
+  height: 100%;
+  transform: translate(5px, 0);
+}
+
+.scale-cv .education__data,
+.scale-cv .experience__data {
+  gap: 0.25rem;
+}
+
+.scale-cv .interests__container {
+  column-gap: 1.5rem;
+}
+
+.scale-cv .skills .box {
+  grid-template-columns: 100px 1fr;
+}
+
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -345,10 +446,35 @@ img {
   font-size: var(--smaller-font-size);
 }
 /*========== SKILLS AND LANGUAGES ==========*/
-
+/*Skills Desktop*/
 .skills__desktop {
   display: none;
 }
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: var(--container-color-alt);
+}
+
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--text-color-light);
+}
+
+/*Skills Mobile*/
 .skills__content,
 .languages__content {
   grid-template-columns: repeat(2, 1fr);
@@ -470,7 +596,7 @@ img {
   }
   .profile__description,
   .experience__description {
-    text-align: justify;
+    text-align: start;
   }
 
   .experience__title {
@@ -485,36 +611,15 @@ img {
     display: none;
   }
 
-  /*============SKILLS DESKTOP=========== */
+  .generate-pdf {
+    display: inline-block;
+  }
+
   .skills__mobile {
     display: none;
   }
   .skills__desktop {
     display: block;
-  }
-
-  .skills .box {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .skills .box .percent {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background: var(--container-color-alt);
-  }
-
-  .skills .box .percent div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: var(--text-color-light);
   }
 
   .languages__content {
