@@ -1,106 +1,127 @@
-// Function to toggle the language and update the display
-// function toggleLanguage(data, currentLanguage) {
-//   const content = data[currentLanguage]
+Function //to toggle the language and update the display
+function toggleLanguage(data, currentLanguage) {
+  const content = data[currentLanguage]
 
-// Mise à jour du contenu en fonction de la langue
+  //Mise à jour du contenu en fonction de la langue
 
-//TITRE
-// document.querySelector('#contactTitle').innerHTML = content.titles.contact
-// document.querySelector('#languagesTitle').innerHTML = content.titles.languages
-// document.querySelector('#educationTitle').innerHTML = content.titles.education
-// document.querySelector('#experienceTitle').innerHTML =
-//   content.titles.experience
-// document.querySelector('#skillsTitle').innerHTML = content.titles.skills
-// document.querySelector('#interestsTitle').innerHTML = content.titles.interests
+  //TITRES NAVIGATION
+  document.querySelector('#headerTitle-1').innerHTML = content.titles.home
+  document.querySelector('#headerTitle-2').innerHTML = content.titles.profile
+  document.querySelector('#headerTitle-3').innerHTML = content.titles.education
+  document.querySelector('#headerTitle-4').innerHTML = content.titles.skills
+  document.querySelector('#headerTitle-5').innerHTML = content.titles.experience
+  document.querySelector('#headerTitle-6').innerHTML = content.titles.languages
 
-//COTE GAUCHE
+  //JOB
+  document.querySelector('#profession').innerHTML = content.job
 
-// NOM, JOB, CONTACT
-// document.querySelector(
-//   '#cvName'
-// ).innerHTML = `${data.basics.name}<br /><span id="cvJob">${content.job}</span>`
-// document.querySelector('#cvPhone').innerHTML = data.basics.phone
-// document.querySelector('#cvEmail').innerHTML = data.basics.email
-// document.querySelector('#cvWeb').innerHTML = data.basics.siteWeb
-// document.querySelector('#cvLinkedin').innerHTML = data.basics.linkedin
-// document.querySelector('#cvAddress').innerHTML = data.basics.address
+  // TITRES SECTION
+  document.querySelector('#sectionTitle-1').innerHTML = content.titles.social
+  document.querySelector('#sectionTitle-2').innerHTML = content.titles.profile
+  document.querySelector('#sectionTitle-3').innerHTML = content.titles.education
+  document.querySelector('#sectionTitle-4').innerHTML = content.titles.skills
+  document.querySelector('#sectionTitle-4bis').innerHTML = content.titles.skills
+  document.querySelector('#sectionTitle-5').innerHTML =
+    content.titles.experience
+  document.querySelector('#sectionTitle-6').innerHTML = content.titles.languages
+  document.querySelector('#sectionTitle-7').innerHTML = content.titles.interests
 
-// EDUCATION
-// const cvEducation = document.querySelector('#education')
-// cvEducation.innerHTML = '' // Clear previous education content
-// for (let education of content.educations) {
-//   cvEducation.innerHTML += `<li>
-//     <h5 id="cvSchoolYear">${education.year}</h5>
-//     <h4 id="cvSchoolDiploma">${education.diploma}</h4>
-//     <h4 id="cvSchool">${education.school}</h4>
-//   </li>`
-// }
+  //PROFILE
+  document.querySelector('#objective').innerHTML = content.objective
 
-//OBJECTIF
-// document.querySelector('#objective').innerHTML = content.objective
+  //EDUCATION
 
-//EXPERIENCE
-// const cvExperience = document.querySelector('#experience')
-// cvExperience.innerHTML = '' // Clear previous experience content
-// for (let experience of content.experiences) {
-//   cvExperience.innerHTML += `<div class="box">
-//     <div class="year_company">
-//     <h5>${experience.period}</h5>
-//     <h5>${experience.company}</h5>
-//   </div>
-//   <div class="text">
-//     <h4>${experience.position}</h4>
-//     <p>
-//     ${experience.responsibilities}
-//     </p>
-//   </div>
-//   </div>`
-// }
+  const cvEducation = document.querySelector('#educationData')
+  cvEducation.innerHTML = '' // Clear previous experience content
+  for (let i = 0; i < content.educations.length; i++) {
+    const education = content.educations[i]
+    const isLastEducation = i === content.educations.length - 1
 
-//LANGUES
-// const languages = content.languages
-// languages.forEach((language, index) => {
-//   const span = document.getElementById(`language-${index + 1}`)
-//   if (span) {
-//     span.textContent = language
-//   }
-// })
+    cvEducation.innerHTML += `<div class="education__content">
+    <div class="education__time">
+      <span class="education__rounder"> </span>
+      ${isLastEducation ? '' : '<span class="education__line"></span>'}
+    </div>
+    <div class="education__data bd-grid">
+      <h3 class="education__title">${education.diploma}</h3>
+      <span class="education__studies">${education.school}</span>
+      <span class="education__year ${i + 1}">${education.year}</span>
+    </div>
+  </div>`
+  }
 
-// HOBBIES
-//   const interests = content.interests
-//   interests.forEach((interest, index) => {
-//     const span = document.getElementById(`hobbies-${index + 1}`)
-//     if (span) {
-//       span.textContent = interest
-//     }
-//   })
-// }
+  //EXPERIENCE
+  const cvExperience = document.querySelector('#experienceData')
+  cvExperience.innerHTML = '' // Clear previous experience content
+  for (let i = 0; i < content.experiences.length; i++) {
+    const experience = content.experiences[i]
+    const isLastExperience = i === content.experiences.length - 1
 
-// Récupération et affichage du contenu pour la langue initiale
+    cvExperience.innerHTML += `<div class="experience__content">
+      <div class="experience__time">
+        <span class="experience__rounder"> </span>
+        ${isLastExperience ? '' : '<span class="experience__line"></span>'}
+      </div>
+  
+      <div class="experience__data bd-grid">
+        <h3 class="experience__title">${experience.position}</h3>
+        <span class="experience__company">${experience.company}</span>
+        <p class="experience__description" id="responsibility-${i + 1}">
+          ${experience.responsibilities}
+        </p>
+      </div>
+    </div>`
+  }
 
-// fetch('assets/data/data.json')
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const initialLanguage = 'english' // Set the initial language
-//     toggleLanguage(data, initialLanguage)
+  //LANGUES
+  const cvLanguages = document.querySelector('#languageData')
+  cvLanguages.innerHTML = ''
+  for (let i = 0; i < content.languages.length; i++) {
+    const language = content.languages[i]
+    cvLanguages.innerHTML += `<li class="languages__name" id="language-${
+      i + 1
+    }">
+      <span class="languages__circle"></span>${language}
+    </li>`
+  }
 
-//     //Toggle Button Event Listener
-//     const toggleButtonDesktop = document.getElementById('toggleButtonDesktop')
-//     const toggleButtonResponsive = document.getElementById(
-//       'toggleButtonResponsive'
-//     )
-//     toggleButtonDesktop.addEventListener('click', () => {
-//       const currentLanguage = toggleButtonDesktop.textContent.toLowerCase() // On obtient la langue initiale
-//       const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
-//       toggleButtonDesktop.textContent = newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
-//       toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
-//     })
-//     toggleButtonResponsive.addEventListener('click', () => {
-//       const currentLanguage = toggleButtonResponsive.textContent.toLowerCase() // On obtient la langue initiale
-//       const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
-//       toggleButtonResponsive.textContent =
-//         newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
-//       toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
-//     })
-//   })
-//   .catch((err) => console.error(err))
+  //HOBBIES
+  const interests = content.interests
+  interests.forEach((interest, index) => {
+    const span = document.getElementById(`hobbie-${index + 1}`)
+    if (span) {
+      span.textContent = interest
+    }
+  })
+}
+
+console.log(document.querySelector('#homeHeader'))
+
+//Récupération et affichage du contenu pour la langue initiale
+
+fetch('assets/data/data.json')
+  .then((response) => response.json())
+  .then((data) => {
+    const initialLanguage = 'english' // Set the initial language
+    toggleLanguage(data, initialLanguage)
+
+    //Toggle Button Event Listener
+    const toggleButtonDesktop = document.getElementById('toggleButtonDesktop')
+    // const toggleButtonResponsive = document.getElementById(
+    //   'toggleButtonResponsive'
+    // )
+    toggleButtonDesktop.addEventListener('click', () => {
+      const currentLanguage = toggleButtonDesktop.textContent.toLowerCase() // On obtient la langue initiale
+      const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
+      toggleButtonDesktop.textContent = newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
+      toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
+    })
+    // toggleButtonResponsive.addEventListener('click', () => {
+    //   const currentLanguage = toggleButtonResponsive.textContent.toLowerCase() // On obtient la langue initiale
+    //   const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
+    //   toggleButtonResponsive.textContent =
+    //     newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
+    //   toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
+    // })
+  })
+  .catch((err) => console.error(err))
