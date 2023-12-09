@@ -112,6 +112,7 @@ let opt = {
 // Function to call areaCv and Html2Pdf options
 function generateResume() {
   html2pdf(areaCv, opt)
+  hideToggleButton()
 }
 
 // When the button is clicked, it executes the three functions
@@ -124,4 +125,5 @@ resumeButton.addEventListener('click', () => {
 
   // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
   setTimeout(removeScale, 5000)
+  showToggleButton()
 })
