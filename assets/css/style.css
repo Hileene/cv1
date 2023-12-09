@@ -374,6 +374,21 @@ img {
   color: var(--container-color);
 }
 
+.toggle-button {
+  display: inline-block;
+  border: 2px solid var(--text-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  transition: 0.3s;
+  font-weight: var(--font-medium);
+  margin-top: var(--mb-3);
+}
+
+.toggle-button:hover {
+  background-color: var(--text-color);
+  color: var(--container-color);
+}
 /*========== SOCIAL ==========*/
 .social__container {
   grid-template-columns: max-content;
