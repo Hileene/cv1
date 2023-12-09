@@ -95,7 +95,23 @@ function toggleLanguage(data, currentLanguage) {
   })
 }
 
-console.log(document.querySelector('#homeHeader'))
+// Fonction pour cacher toggleButton
+function hideToggleButton() {
+  const toggleButton = document.getElementById('toggleButton')
+  if (toggleButton) {
+    toggleButton.style.display = 'none'
+  }
+}
+
+// Fonction pour montrer toggleButton
+function showToggleButton() {
+  setTimeout(() => {
+    const toggleButton = document.getElementById('toggleButton')
+    if (toggleButton) {
+      toggleButton.style.display = 'inline-block'
+    }
+  }, 5000)
+}
 
 //Récupération et affichage du contenu pour la langue initiale
 
@@ -106,22 +122,12 @@ fetch('assets/data/data.json')
     toggleLanguage(data, initialLanguage)
 
     //Toggle Button Event Listener
-    const toggleButtonDesktop = document.getElementById('toggleButtonDesktop')
-    // const toggleButtonResponsive = document.getElementById(
-    //   'toggleButtonResponsive'
-    // )
-    toggleButtonDesktop.addEventListener('click', () => {
-      const currentLanguage = toggleButtonDesktop.textContent.toLowerCase() // On obtient la langue initiale
+    const toggleButton = document.getElementById('toggleButton')
+    toggleButton.addEventListener('click', () => {
+      const currentLanguage = toggleButton.textContent.toLowerCase() // On obtient la langue initiale
       const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
-      toggleButtonDesktop.textContent = newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
+      toggleButton.textContent = newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
       toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
     })
-    // toggleButtonResponsive.addEventListener('click', () => {
-    //   const currentLanguage = toggleButtonResponsive.textContent.toLowerCase() // On obtient la langue initiale
-    //   const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
-    //   toggleButtonResponsive.textContent =
-    //     newLanguage === 'english' ? 'EN' : 'FR' // Mise à jour du contenu du bouton
-    //   toggleLanguage(data, newLanguage) // Mise à jour du contenu affiché
-    // })
   })
   .catch((err) => console.error(err))
