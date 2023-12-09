@@ -10,11 +10,13 @@
   },
   "english": {
     "titles": {
-      "contact": "Contact Info",
+      "home": "Home",
       "education": "Education",
       "languages": "Languages",
       "experience": "Experience",
-      "skills": "Professional Skills",
+      "skills": " Skills",
+      "profile": "Profile",
+      "social": "Social",
       "interests": "Interests"
     },
     "job": "Junior Frontend Developer",
@@ -55,33 +57,29 @@
 
     "experiences": [
       {
-        "position": "Translator (English to French)-Remote",
-        "company": "RWS Moravia",
-        "period": "2021-Present",
+        "position": "TRANSLATOR / DATA ANNOTATOR",
+        "company": "From 2021 to Present | RWS Moravia | Remote",
         "responsibilities": [
           "Translated and localized a variety of content including general news, blog posts, social media, and IT materials from English to French. Conducted meticulous review and proofreading to ensure linguistic accuracy."
         ]
       },
       {
-        "position": "Search Engine Evaluator-Remote",
-        "company": "Lionbridge",
-        "period": "2019-2021",
+        "position": "SEARCH ENGINE EVALUATOR",
+        "company": "From 2021 to Present | Lionbridge | Remote",
         "responsibilities": [
           "Evaluated search engine page results and meticulously mapped search outcomes for the French market in adherence to client guidelines. Demonstrated keen analytical skills and unwavering attention to detail."
         ]
       },
       {
-        "position": "Freelance French Content Editor-Remote",
-        "company": "Fanatee",
-        "period": "2018-2019",
+        "position": "FRENCH CONTENT EDITOR",
+        "company": "From 2021 to Present | Fanatee | Remote",
         "responsibilities": [
           "Edited and created game content, translating from English to French for a crossword game, as well as app interface, app store materials, and corporate documents. Oversaw French Content Creators' work, providing feedback and maintaining editing guidelines."
         ]
       },
       {
-        "position": " Bilingual Web Content Editor-Montreal",
-        "company": "Cimpl",
-        "period": "2013-2014",
+        "position": "BILINGUAL CONTENT EDITOR",
+        "company": "From 2021 to Present | Cimpl | Montreal, Canada",
         "responsibilities": [
           "Managed blog posts, wrote and edited content on Hubspot CMS, and translated articles and corporate documents from English to French. Completed Inbound Marketing training, contributed to campaign development, organized SEO database, and authored a White Paper on BYOD (Bring Your Own Device)."
         ]
@@ -91,17 +89,17 @@
     "educations": [
       {
         "year": "2022-2023",
-        "diploma": "Associate Degree Frontend Developer",
+        "diploma": "A.S. FRONTEND DEVELOPMENT",
         "school": "Openclassrooms"
       },
       {
         "year": "2008-2011",
-        "diploma": "Bachelor in Communication",
+        "diploma": "BA IN COMMUNICATION",
         "school": "University of Quebec in Montreal, Montreal, Canada"
       },
       {
         "year": "2001-2005",
-        "diploma": "Bachelor in History",
+        "diploma": "BA IN  HISTORY",
         "school": "Paris VII - University Paris Diderot Paris 7, Paris, France"
       }
     ],
@@ -115,15 +113,17 @@
 
     "languages": ["French", "English"],
 
-    "interests": ["Novel", "Cooking", "Puzzle", "Cinema"]
+    "interests": ["Novel", "Cooking", "Puzzle", "Coding Games", "Writing"]
   },
   "french": {
     "titles": {
-      "contact": "Contact",
+      "home": "Accueil",
       "education": "Éducation",
       "languages": "Langues",
       "experience": "Expérience",
-      "skills": "Compétences",
+      "skills": " Compétences",
+      "profile": "Profile",
+      "social": "Réseaux Sociaux",
       "interests": "Hobbies"
     },
     "job": "Développeuse Frontend Junior",
@@ -160,33 +160,29 @@
     ],
     "experiences": [
       {
-        "position": "Traductrice (Anglais vers Français) - À distance",
-        "company": "RWS Moravia",
-        "period": "2021-Présent",
+        "position": "TRADUCTRICE / ANNOTATION DE DONNÉES",
+        "company": "De 2021 à Aujourd'hui | RWS Moravia | Distance",
         "responsibilities": [
           "Traduction et localisation d'une variété de contenus, y compris les actualités générales, les articles de blog, les réseaux sociaux et le matériel informatique de l'anglais vers le français. Révision minutieuse et relecture pour garantir l'exactitude linguistique."
         ]
       },
       {
-        "position": "Évaluatrice de Moteurs de Recherche - À distance",
-        "company": "Lionbridge",
-        "period": "2019-2021",
+        "position": "ÉVALUATRICE DE MOTEUR DE RECHERCHE",
+        "company": "De 2019 à 2021 | Lionbridge | Distance",
         "responsibilities": [
           "Évaluation des résultats des moteurs de recherche et cartographie méticuleuse des résultats de recherche pour le marché français, conformément aux directives du client. Démonstration de compétences analytiques approfondies et d'une attention inébranlable aux détails."
         ]
       },
       {
-        "position": "Éditrice de Contenu Freelance en Français - À distance",
-        "company": "Fanatee",
-        "period": "2018-2019",
+        "position": "ÉDITRICE DE CONTENU DE JEU MOBILE",
+        "company": "De 2018 à 2019 | Fanatee | Distance",
         "responsibilities": [
-          "Édition et création de contenu de jeux, traduction de l'anglais vers le français pour un jeu de mots croisés, ainsi que l'interface de l'application, les matériaux de l'App Store et les documents internes. Supervision du travail des créateurs de contenu français, transmettre des commentaires et maintien des directives d'édition."
+          "Édition et création de contenu de jeux pour le marché français. Traduction de l'anglais vers le français pour un jeu de mots croisés, ainsi que l'interface de l'application, les matériaux de l'App Store et les documents internes. Supervision du travail des créateurs de contenu français, transmettre des commentaires et maintien des directives d'édition."
         ]
       },
       {
-        "position": "Rédactrice Web Bilingue - Montréal",
-        "company": "Cimpl",
-        "period": "2013-2014",
+        "position": "RÉDACTRICE WEB BILINGUE",
+        "company": "De 2013 à 2014 | Cimpl | Montréal, Canada",
         "responsibilities": [
           "Gestion des articles de blog, rédaction et édition de contenu sur Hubspot CMS, et traduction d'articles et de documents internes de l'anglais vers le français. Formation en Inbound Marketing, contribution au développement de campagnes, organisation de la base de données SEO, et rédaction d'un Livre Blanc sur le BYOD (Apportez Votre Propre Appareil)."
         ]
@@ -216,6 +212,12 @@
       "Projet Académique 4 - Description du projet académique 4."
     ],
     "languages": ["Français", "Anglais"],
-    "interests": ["Roman", "Cuisine", "Puzzle", "Cinéma"]
+    "interests": [
+      "Roman",
+      "Cuisine",
+      "Puzzle",
+      "Jeux de programmation",
+      "Écrire"
+    ]
   }
 }
