@@ -46,9 +46,6 @@
 html {
   scroll-behavior: smooth;
 }
-/*========== Variables Dark theme ==========*/
-
-/*========== Button Dark/Light ==========*/
 
 /*========== Font size variables to scale cv ==========*/
 body.scale-cv {
@@ -58,6 +55,14 @@ body.scale-cv {
   --normal-font-size: 0.715rem;
   --small-font-size: 0.6rem;
   --smaller-font-size: 0.558rem;
+}
+body.fr.scale-cv {
+  --h1-font-size: 0.7rem;
+  --h2-font-size: 0.7rem;
+  --h3-font-size: 0.65rem;
+  --normal-font-size: 0.615rem;
+  --small-font-size: 0.5rem;
+  --smaller-font-size: 0.458rem;
 }
 
 /*========== Generate PDF button ==========*/
@@ -86,8 +91,8 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-  /* padding: 1.12rem 0 0.8rem; */
-  padding: 0.8rem 0 0.2rem;
+  padding: 0.6rem 0 0.2rem;
+  /* padding: 0.8rem 0 0.2rem; */
 }
 
 .scale-cv .section-title {
@@ -120,7 +125,7 @@ body.scale-cv {
 .scale-cv .home__icon,
 .scale-cv .social__icon,
 .scale-cv .interests__icon {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 .scale-cv .education__container,
@@ -165,6 +170,20 @@ body.scale-cv {
   height: 5px;
 }
 
+body.fr .scale-cv .resume {
+  grid-template-columns: 1fr 1fr;
+}
+
+body.fr .scale-cv .section {
+  padding: 0.6rem 0 0.2rem;
+}
+
+body.fr .scale-cv .home__icon,
+.scale-cv .social__icon,
+.scale-cv .interests__icon {
+  font-size: 0.75rem;
+}
+
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -172,6 +191,9 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+}
+body.fr .resume {
+  grid-template-columns: 1.5fr 1fr;
 }
 
 h1,

@@ -1,6 +1,9 @@
-Function //to toggle the language and update the display
+Function //Pour basculer d'une langue à une autre et mettre à jour l'affichage
 function toggleLanguage(data, currentLanguage) {
   const content = data[currentLanguage]
+
+  // Ajoute ou retire la classe en fonction de la langue du body
+  document.body.classList.toggle('fr', currentLanguage === 'french')
 
   //Mise à jour du contenu en fonction de la langue
 
