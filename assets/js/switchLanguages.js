@@ -47,7 +47,7 @@ function toggleLanguage(data, currentLanguage) {
   //EDUCATION
 
   const cvEducation = document.querySelector('#educationData')
-  cvEducation.innerHTML = '' // Clear previous experience content
+  cvEducation.innerHTML = '' // Efface le contenu de l'expérience précédente pour éviter les duplications
   for (let i = 0; i < content.educations.length; i++) {
     const education = content.educations[i]
     const isLastEducation = i === content.educations.length - 1
@@ -67,7 +67,7 @@ function toggleLanguage(data, currentLanguage) {
 
   //EXPERIENCE
   const cvExperience = document.querySelector('#experienceData')
-  cvExperience.innerHTML = '' // Clear previous experience content
+  cvExperience.innerHTML = ''
   for (let i = 0; i < content.experiences.length; i++) {
     const experience = content.experiences[i]
     const isLastExperience = i === content.experiences.length - 1
