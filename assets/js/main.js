@@ -1,12 +1,12 @@
-/*==================== SHOW MENU ====================*/
+/*==================== AFFICHER LE MENU ====================*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId)
   nav = document.getElementById(navId)
 
-  //Validates that variables exist
+  // Valide que les variables existent
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      // we add the show-menu class to the div tag with the nav menu class
+      // Ajoute la classe show-menu à la balise div avec la classe nav menu
       nav.classList.toggle('show-menu')
     })
   }
@@ -14,18 +14,18 @@ const showMenu = (toggleId, navId) => {
 
 showMenu('nav-toggle', 'nav-menu')
 
-/*==================== REMOVE MENU MOBILE ====================*/
+/*==================== SUPPRIMER LE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
   const navMenu = document.getElementById('nav-menu')
-  //when we click on each nav__link, we remove the show-menu class
+  // Lorsque nous cliquons sur chaque nav__link, nous supprimons la classe show-menu
   navMenu.classList.remove('show-menu')
 }
 
 navLink.forEach((n) => n.addEventListener('click', linkAction))
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+/*==================== DÉFILEMENT DES SECTIONS AVEC LIEN ACTIF ====================*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
@@ -49,54 +49,34 @@ function scrollActive() {
   })
 }
 
-// function scrollActive() {
-//   const scrollY = window.scrollY
-//   sections.forEach((current) => {
-//     const sectionHeight = current.offsetHeight
-//     const sectionTop = current.offsetTop - 50
-//     const sectionId = current.getAttribute('id')
-//     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//       document
-//         .querySelectorAll('nav__menu a[href*="' + sectionId + ']')
-//         .classList.add('active-link')
-//     } else {
-//       document
-//         .querySelectorAll('nav__menu a[href*="' + sectionId + ']')
-//         .classList.remove('active-link')
-//     }
-//   })
-// }
-
 window.addEventListener('scroll', scrollActive)
 
-/*==================== SHOW SCROLL TOP ====================*/
+/*==================== AFFICHER LE BOUTON REMONTER ====================*/
 function scrollTop() {
   const scrollTop = document.getElementById('scroll-top')
-  //When the scroll is heigher than 560 viewport height, add the show-scroll class to the a tag with the scrollTop attribute
+  // Lorsque le défilement est supérieur à 560 pixels de la fenêtre d'affichage, ajoutez la classe show-scroll à la balise a avec l'attribut scrollTop
   if (this.scrollY >= 200) scrollTop.classList.add('show-scroll')
   else scrollTop.classList.remove('show-scroll')
 }
 
 window.addEventListener('scroll', scrollTop)
 
-/*==================== DARK LIGHT THEME ====================*/
-
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
+/*==================== RÉDUIRE LA TAILLE POUR IMPRIMER SUR UNE FEUILLE A4 ====================*/
 function scaleCv() {
   document.body.classList.add('scale-cv')
 }
 
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
+/*==================== SUPPRIMER LA TAILLE LORSQUE LE CV EST TÉLÉCHARGÉ ====================*/
 function removeScale() {
   document.body.classList.remove('scale-cv')
 }
-/*==================== GENERATE PDF ====================*/
-// PDF generated area
+/*==================== GÉNÉRER UN PDF ====================*/
+// Zone générée pour le PDF
 let areaCv = document.getElementById('area-cv')
 
 let resumeButton = document.getElementById('resume-button')
 
-// Html2pdf options
+// Options Html2pdf
 let opt = {
   margin: 0,
   filename: 'myResume.pdf',
@@ -109,21 +89,23 @@ let opt = {
   },
 }
 
-// Function to call areaCv and Html2Pdf options
+// Fonction pour appeler areaCv et les options Html2Pdf
 function generateResume() {
   html2pdf(areaCv, opt)
+  //Appel de la fonction hideToggleButton pour retirer le bouton langue du du CV en version PDF
   hideToggleButton()
 }
 
-// When the button is clicked, it executes the three functions
+// Lorsqu'on clique sur le bouton, il exécute les trois fonctions
 resumeButton.addEventListener('click', () => {
-  // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
+  // 1. La classe .scale-cv est ajoutée au body, ce qui réduit la taille des éléments
   scaleCv()
 
-  // 2. The PDF is generated
+  // 2. Le PDF est généré
   generateResume()
 
-  // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+  // 3. La classe .scale-cv est supprimée du body après 5s pour revenir à la taille normale.
   setTimeout(removeScale, 5000)
+  //Appel de la fonction showToggleButton pour que le bouton langue revienne a sa place après 5s
   showToggleButton()
 })
