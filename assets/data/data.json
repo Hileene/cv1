@@ -1,13 +1,4 @@
 {
-  "basics": {
-    "name": "Aline Behalal",
-    "address": "Paris 19e, France",
-    "email": "janedoe@gmma.com",
-    "siteWeb": "Your portfolio",
-    "linkedin": "linkedin.com/in/xxxxx",
-    "github": "Link to your GitHub profile",
-    "phone": "+33 0 00 00 00 00"
-  },
   "english": {
     "titles": {
       "home": "Home",
