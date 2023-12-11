@@ -47,7 +47,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/*========== Font size variables to scale cv ==========*/
+/*========== Variables font size pour redimensionner le CV ==========*/
 body.scale-cv {
   --h1-font-size: 0.8rem;
   --h2-font-size: 0.8rem;
@@ -65,7 +65,7 @@ body.fr.scale-cv {
   --smaller-font-size: 0.458rem;
 }
 
-/*========== Generate PDF button ==========*/
+/*========== Bouton PDF ==========*/
 .generate-pdf {
   display: none;
   position: absolute;
@@ -80,19 +80,17 @@ body.fr.scale-cv {
   color: var(--title-color);
 }
 
-/*========== Classes modified to reduce size and print on A4 sheet ==========*/
+/*========== Classes modifiées pour réduire la taille et imprimer sur une feuille A4  ==========*/
 .scale-cv .generate-pdf {
   display: none;
 }
 
 .scale-cv .bd-container {
-  /* max-width: 746px; */
   max-width: 595px;
 }
 
 .scale-cv .section {
   padding: 0.6rem 0 0.2rem;
-  /* padding: 0.8rem 0 0.2rem; */
 }
 
 .scale-cv .section-title {
