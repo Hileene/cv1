@@ -37,7 +37,6 @@ window.addEventListener('scroll', scrollTop)
 
 /*==================== CRÉATION DU BTN DOWNLOAD VERSION MOBILE POUR LE PDF EN FRANCAIS =================*/
 // Fonction pour créer un bouton PDF qui change en fonction de la langue
-
 function buttonPdf(isFrench) {
   const resumeBtnContainer = document.getElementById('resumeBtn')
   const resumeBtnEn = document.querySelector('.home__button-movil')
@@ -55,6 +54,9 @@ function buttonPdf(isFrench) {
     newResumeBtnFr.classList.add('home__button-movil')
     newResumeBtnFr.setAttribute('download', 'myResumeFR.pdf')
     resumeBtnContainer.appendChild(newResumeBtnFr)
+
+    // Ajouter une classe commune au bouton
+    newResumeBtnFr.classList.add('home-buttons')
   } else {
     // Efface un btn PDF FR
     const resumeBtnFr = document.querySelector('.home__button-movil')
@@ -69,6 +71,9 @@ function buttonPdf(isFrench) {
     newResumeBtnEn.classList.add('home__button-movil')
     newResumeBtnEn.setAttribute('download', 'myResumeEN.pdf')
     resumeBtnContainer.appendChild(newResumeBtnEn)
+
+    // // Ajouter une classe commune au bouton
+    newResumeBtnEn.classList.add('home-buttons')
   }
 }
 

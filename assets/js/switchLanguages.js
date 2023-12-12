@@ -152,6 +152,7 @@ fetch('assets/data/data.json')
 
     //Toggle Button Event Listener
     const toggleButton = document.getElementById('toggleButton')
+    toggleButton.classList.add('home-buttons')
     toggleButton.addEventListener('click', () => {
       const currentLanguage = toggleButton.textContent.toLowerCase() // On obtient la langue initiale
       const newLanguage = currentLanguage === 'en' ? 'french' : 'english' // Bascule de langue
