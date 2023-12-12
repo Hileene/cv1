@@ -36,41 +36,39 @@ function scrollTop() {
 window.addEventListener('scroll', scrollTop)
 
 /*==================== CRÉATION DU BTN DOWNLOAD VERSION MOBILE POUR LE PDF EN FRANCAIS =================*/
-// Function to create and toggle the PDF buttons based on language
+// Fonction pour créer un bouton PDF qui change en fonction de la langue
+
 function buttonPdf(isFrench) {
   const resumeBtnContainer = document.getElementById('resumeBtn')
   const resumeBtnEn = document.querySelector('.home__button-movil')
-  const resumeBtnFr = document.querySelector('.home__button-movil2')
 
   if (isFrench) {
-    // Remove the English button and create the French button
+    // Efface le btn PDF EN
     if (resumeBtnEn) {
       resumeBtnContainer.removeChild(resumeBtnEn)
     }
 
-    // Create the French button
-    if (!resumeBtnFr) {
-      const newResumeBtnFr = document.createElement('a')
-      newResumeBtnFr.href = 'assets/pdf/myResumeFR.pdf'
-      newResumeBtnFr.textContent = 'Téléchargez'
-      newResumeBtnFr.classList.add('home__button-movil2')
-      newResumeBtnFr.setAttribute('download', 'myResumeFR.pdf')
-      resumeBtnContainer.appendChild(newResumeBtnFr)
-    }
+    // Créer un btn PDF FR
+    const newResumeBtnFr = document.createElement('a')
+    newResumeBtnFr.href = 'assets/pdf/myResumeFR.pdf'
+    newResumeBtnFr.textContent = 'Téléchargez'
+    newResumeBtnFr.classList.add('home__button-movil')
+    newResumeBtnFr.setAttribute('download', 'myResumeFR.pdf')
+    resumeBtnContainer.appendChild(newResumeBtnFr)
   } else {
-    // Remove the French button and create the English button
+    // Efface un btn PDF FR
+    const resumeBtnFr = document.querySelector('.home__button-movil')
     if (resumeBtnFr) {
       resumeBtnContainer.removeChild(resumeBtnFr)
     }
 
-    // Create the English button
-    if (!resumeBtnEn) {
-      const newResumeBtnEn = document.createElement('a')
-      newResumeBtnEn.href = 'assets/pdf/myResumeEN.pdf'
-      newResumeBtnEn.textContent = 'Download'
-      newResumeBtnEn.classList.add('home__button-movil')
-      resumeBtnContainer.appendChild(newResumeBtnEn)
-    }
+    // Créer un btn PDF EN
+    const newResumeBtnEn = document.createElement('a')
+    newResumeBtnEn.href = 'assets/pdf/myResumeEN.pdf'
+    newResumeBtnEn.textContent = 'Download'
+    newResumeBtnEn.classList.add('home__button-movil')
+    newResumeBtnEn.setAttribute('download', 'myResumeEN.pdf')
+    resumeBtnContainer.appendChild(newResumeBtnEn)
   }
 }
 
