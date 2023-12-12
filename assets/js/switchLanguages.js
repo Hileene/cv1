@@ -1,4 +1,4 @@
-let isFrench = true // Default language state
+let isFrench = true
 
 Function //Pour basculer d'une langue à une autre et mettre à jour l'affichage
 function toggleLanguage(data, currentLanguage) {
@@ -7,7 +7,7 @@ function toggleLanguage(data, currentLanguage) {
   // Ajoute ou retire la classe en fonction de la langue du body
   document.body.classList.toggle('fr', currentLanguage === 'french')
 
-  // Your logic to toggle between English and French
+  //Logique pour basculer ente l'anglais et le français Your logic to toggle between English and French
   isFrench = !isFrench
 
   //Mise à jour du contenu en fonction de la langue
