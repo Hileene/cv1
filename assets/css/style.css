@@ -378,7 +378,7 @@ img {
   font-size: 1.2rem;
 }
 
-.home__button-movil {
+.home-buttons {
   display: inline-block;
   border: 2px solid var(--text-color);
   color: var(--title-color);
@@ -390,7 +390,7 @@ img {
   cursor: pointer;
 }
 
-.home__button-movil:hover {
+.home-buttons:hover {
   background-color: var(--text-color);
   color: var(--container-color);
 }
@@ -639,10 +639,6 @@ img {
 
   .home__button-movil {
     display: none;
-  }
-
-  .toggle-button {
-    display: inline-block;
   }
 
   .generate-pdf {
