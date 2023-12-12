@@ -1,9 +1,14 @@
+let isFrench = true // Default language state
+
 Function //Pour basculer d'une langue à une autre et mettre à jour l'affichage
 function toggleLanguage(data, currentLanguage) {
   const content = data[currentLanguage]
 
   // Ajoute ou retire la classe en fonction de la langue du body
   document.body.classList.toggle('fr', currentLanguage === 'french')
+
+  // Your logic to toggle between English and French
+  isFrench = !isFrench
 
   //Mise à jour du contenu en fonction de la langue
 
@@ -19,6 +24,13 @@ function toggleLanguage(data, currentLanguage) {
     '#homePhone'
   ).innerHTML = `<i class="bx bx-phone home__icon"></i> ${config.phone}`
 
+  //RÉSEAUX SOCIAUX
+  document.querySelector(
+    '#linkedinLink'
+  ).innerHTML = `<i class="bx bxl-linkedin-square social__icon"></i> ${content.socials.linkedin}`
+  document.querySelector(
+    '#githubLink'
+  ).innerHTML = ` <i class="bx bxl-github social__icon"></i> ${content.socials.github}`
   //TITRES NAVIGATION
   document.querySelector('#headerTitle-1').innerHTML = content.titles.home
   document.querySelector('#headerTitle-2').innerHTML = content.titles.profile
@@ -108,6 +120,8 @@ function toggleLanguage(data, currentLanguage) {
       span.textContent = interest
     }
   })
+
+  buttonPdf(isFrench)
 }
 
 // Fonction pour cacher toggleButton
