@@ -25,32 +25,6 @@ function linkAction() {
 
 navLink.forEach((n) => n.addEventListener('click', linkAction))
 
-/*==================== DÉFILEMENT DES SECTIONS AVEC LIEN ACTIF ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-  const scrollY = window.scrollY
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight
-    const sectionTop = current.offsetTop - 50
-    const sectionId = current.getAttribute('id')
-
-    const links = document.querySelectorAll(
-      'nav__menu a[href*="' + sectionId + '"]'
-    )
-
-    links.forEach((link) => {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        link.classList.add('active-link')
-      } else {
-        link.classList.remove('active-link')
-      }
-    })
-  })
-}
-
-window.addEventListener('scroll', scrollActive)
-
 /*==================== AFFICHER LE BOUTON REMONTER ====================*/
 function scrollTop() {
   const scrollTop = document.getElementById('scroll-top')
@@ -60,6 +34,45 @@ function scrollTop() {
 }
 
 window.addEventListener('scroll', scrollTop)
+
+/*==================== CRÉATION DU BTN DOWNLOAD VERSION MOBILE POUR LE PDF EN FRANCAIS =================*/
+// Function to create and toggle the PDF buttons based on language
+function buttonPdf(isFrench) {
+  const resumeBtnContainer = document.getElementById('resumeBtn')
+  const resumeBtnEn = document.querySelector('.home__button-movil')
+  const resumeBtnFr = document.querySelector('.home__button-movil2')
+
+  if (isFrench) {
+    // Remove the English button and create the French button
+    if (resumeBtnEn) {
+      resumeBtnContainer.removeChild(resumeBtnEn)
+    }
+
+    // Create the French button
+    if (!resumeBtnFr) {
+      const newResumeBtnFr = document.createElement('a')
+      newResumeBtnFr.href = 'assets/pdf/myResumeFR.pdf'
+      newResumeBtnFr.textContent = 'Téléchargez'
+      newResumeBtnFr.classList.add('home__button-movil2')
+      newResumeBtnFr.setAttribute('download', 'myResumeFR.pdf')
+      resumeBtnContainer.appendChild(newResumeBtnFr)
+    }
+  } else {
+    // Remove the French button and create the English button
+    if (resumeBtnFr) {
+      resumeBtnContainer.removeChild(resumeBtnFr)
+    }
+
+    // Create the English button
+    if (!resumeBtnEn) {
+      const newResumeBtnEn = document.createElement('a')
+      newResumeBtnEn.href = 'assets/pdf/myResumeEN.pdf'
+      newResumeBtnEn.textContent = 'Download'
+      newResumeBtnEn.classList.add('home__button-movil')
+      resumeBtnContainer.appendChild(newResumeBtnEn)
+    }
+  }
+}
 
 /*==================== RÉDUIRE LA TAILLE POUR IMPRIMER SUR UNE FEUILLE A4 ====================*/
 function scaleCv() {
