@@ -150,7 +150,7 @@ fetch('assets/data/data.json')
     const initialLanguage = 'english' // Set the initial language
     toggleLanguage(data, initialLanguage)
 
-    //Toggle Button Event Listener
+    //Écouteur d'évènement du bouton d'option langue
     const toggleButton = document.getElementById('toggleButton')
     toggleButton.classList.add('home-buttons')
     toggleButton.addEventListener('click', () => {
