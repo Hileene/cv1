@@ -7,7 +7,7 @@ function toggleLanguage(data, currentLanguage) {
   // Ajoute ou retire la classe en fonction de la langue du body
   document.body.classList.toggle('fr', currentLanguage === 'french')
 
-  //Logique pour basculer ente l'anglais et le français Your logic to toggle between English and French
+  //Logique pour basculer ente l'anglais et le français
   isFrench = !isFrench
 
   //Mise à jour du contenu en fonction de la langue
