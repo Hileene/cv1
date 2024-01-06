@@ -1,6 +1,6 @@
 let isFrench = true
 
-Function //Pour basculer d'une langue à une autre et mettre à jour l'affichage
+//Pour basculer d'une langue à une autre et mettre à jour l'affichage
 function toggleLanguage(data, currentLanguage) {
   const content = data[currentLanguage]
 
