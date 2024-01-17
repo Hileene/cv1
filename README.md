@@ -19,7 +19,7 @@ This is a responsive resume built with HTML, CSS, and JavaScript.
 
 ## Preview
 
-![Resume Preview](https://hileene.github.io/cv1/)
+[Resume Preview](https://hileene.github.io/cv1/)
 
 ## Getting Started
 
