@@ -12,18 +12,6 @@ function toggleLanguage(data, currentLanguage) {
 
   //Mise à jour du contenu en fonction de la langue
 
-  //ADRESSE
-
-  document.querySelector(
-    '#homeAddress'
-  ).innerHTML = `<i class="bx bx-map home__icon"></i> ${config.address}`
-  document.querySelector(
-    '#homeEmail'
-  ).innerHTML = `<i class="bx bx-envelope home__icon"></i> ${config.email}`
-  document.querySelector(
-    '#homePhone'
-  ).innerHTML = `<i class="bx bx-phone home__icon"></i> ${config.phone}`
-
   //RÉSEAUX SOCIAUX
   document.querySelector(
     '#linkedinLink'
