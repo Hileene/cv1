@@ -216,6 +216,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 img {
@@ -527,10 +528,6 @@ img {
   border-radius: 50%;
   margin-right: 0.75rem;
 }
-
-/*========== CERTIFICATES ==========*/
-
-/*========== REFERENCES ==========*/
 
 /*========== INTERESTS ==========*/
 .interests__container {
